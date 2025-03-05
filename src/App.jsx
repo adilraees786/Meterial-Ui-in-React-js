@@ -4,10 +4,9 @@ import React from 'react'
 const App = () => {
   return (
     <div>
-    <div>
-      <h1>My Meterial Ui</h1>
-<Button color="">Click Me</Button>
-    </div>
+      <div>
+        <h1>Restaurant Website</h1>
+      </div>
     </div>
   )
 }
