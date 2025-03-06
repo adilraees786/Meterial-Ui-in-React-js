@@ -1,38 +1,23 @@
 
-// import React from 'react'
-// import { BrowserRouter as Router, Routes, Route } from "react-router-dom";  
-// import Llayout from './compoments/Layout/Llayout';
-
-
-
-// const App = () => {
-//   return (
-//     <Router>
-//       <h1>Restaurant</h1>
-//     <Routes>
-//       <Route path="/" element={<Llayout/>} />
-     
-//     </Routes>
-   
-    
-//   </Router>
-    
-//   )
-// }
-
-// export default App
-
 import ReactDOM from "react-dom/client";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import Llayout from "./compoments/Layout/Llayout";
+import NoPage from "./Pages/NoPage";
+import Home from "./Pages/Home";
+import Layout from './Pages/Layout';
+import Blogs from './Pages/Blogs';
+import Contact from "./Pages/Contact";
+
 
 
 export default function App() {
   return (
     <BrowserRouter>
       <Routes>
-        <Route path="/" element={<Llayout />}>
-    
+        <Route path="/" element={<Layout />}>
+          <Route index element={<Home />} />
+          <Route path="blogs" element={<Blogs />} />
+          <Route path="contact" element={<Contact />} />
+          <Route path="*" element={<NoPage />} />
         </Route>
       </Routes>
     </BrowserRouter>
