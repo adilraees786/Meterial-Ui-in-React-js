@@ -1,14 +1,43 @@
-import { Button } from '@mui/material'
-import React from 'react'
 
-const App = () => {
+// import React from 'react'
+// import { BrowserRouter as Router, Routes, Route } from "react-router-dom";  
+// import Llayout from './compoments/Layout/Llayout';
+
+
+
+// const App = () => {
+//   return (
+//     <Router>
+//       <h1>Restaurant</h1>
+//     <Routes>
+//       <Route path="/" element={<Llayout/>} />
+     
+//     </Routes>
+   
+    
+//   </Router>
+    
+//   )
+// }
+
+// export default App
+
+import ReactDOM from "react-dom/client";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import Llayout from "./compoments/Layout/Llayout";
+
+
+export default function App() {
   return (
-    <div>
-      <div>
-        <h1>Restaurant Website</h1>
-      </div>
-    </div>
-  )
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<Llayout />}>
+    
+        </Route>
+      </Routes>
+    </BrowserRouter>
+  );
 }
 
-export default App
+const root = ReactDOM.createRoot(document.getElementById('root'));
+root.render(<App />);
