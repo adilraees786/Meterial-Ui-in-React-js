@@ -1,13 +1,20 @@
 import React from 'react'
-
+import { AppBar, Toolbar, Typography } from '@mui/material'
+import ShoppingCartCheckoutIcon from '@mui/icons-material/ShoppingCartCheckout';
 const Home = () => {
   return (
-    <div>
-<h1>Home</h1>
+    <React.Fragment>
+      <AppBar sx={{background: 'black'}}>
+        <Toolbar>
 
-    </div>
-   
-   
+
+        {/* <Typography > SHOPPING </Typography> */}
+        <ShoppingCartCheckoutIcon/>
+        </Toolbar>
+      </AppBar>
+    </React.Fragment>
+
+
   )
 }
 
