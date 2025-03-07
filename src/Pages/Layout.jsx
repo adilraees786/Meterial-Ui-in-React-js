@@ -4,9 +4,9 @@ import { Link, Outlet } from "react-router-dom";
 
 const Layout = () => {
   return (
-    <div className="min-h-screen flex flex-col">
+    <div className="min-h-screen flex flex-col ">
       {/* Navbar */}
-      <nav className="bg-blue-600 text-white shadow-lg">
+      <nav className="bg-blue-600 text-white shadow-lg h-15 w-full">
         <div className="container mx-auto px-4 py-4 flex justify-between items-center">
           <h1 className="text-2xl font-bold">My Website</h1>
           <ul className="flex space-x-6 gap-5 justify-between text-2xl">

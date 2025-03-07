@@ -7,6 +7,8 @@ import Layout from './Pages/Layout';
 import Blogs from './Pages/Blogs';
 import Contact from "./Pages/Contact";
 import Signup from "./Components/Signup";
+import Login from "./Components/Login";
+
 
 
 
@@ -21,6 +23,7 @@ export default function App() {
           <Route path="contact" element={<Contact />} />
           <Route path="*" element={<NoPage />} />
           <Route path="signup" element={<Signup />} />
+          <Route path="login" element={<Login />} />
         </Route>
       </Routes>
     </BrowserRouter>
