@@ -52,6 +52,8 @@ import {
 import ShoppingCartCheckoutIcon from '@mui/icons-material/ShoppingCartCheckout';
 import DramerCom from '../Components/DramerCom';
 
+const PAGES =["Blogs", "Contact", "Home", "About", "Services"]
+
 const Layout = () => {
   const [value, setvalue] = useState();
   const theme = useTheme();
@@ -82,11 +84,14 @@ const Layout = () => {
             value={value}
             onChange={(e, value) => setvalue(value)}
             indicatorColor='secondary'>
-            <Tab label="Blogs" />
-            <Tab label="Contact" />
-            <Tab label="Home" />
-            <Tab label="About" />
-            <Tab label="Service" />
+              {
+                PAGES.map((page, index) =>(
+                  <Tab key={index} label={page} />
+
+                ))
+
+              }
+            
           </Tabs>
           <Button sx={{ marginLeft: "auto" }} variant="contained">
             Login{" "}
