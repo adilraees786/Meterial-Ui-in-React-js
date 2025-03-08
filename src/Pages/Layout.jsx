@@ -45,39 +45,63 @@
 // export default Layout;
 
 import React, { useState } from 'react'
-import { AppBar, Tabs, Tab, Toolbar, Typography, Button } from '@mui/material'
+import {
+  AppBar, Tabs, Tab, Toolbar, Typography,
+  Button, useMediaQuery, useTheme
+} from '@mui/material'
 import ShoppingCartCheckoutIcon from '@mui/icons-material/ShoppingCartCheckout';
 import DramerCom from '../Components/DramerCom';
 
 const Layout = () => {
-const [value, setvalue ] = useState();
+  const [value, setvalue] = useState();
+  const theme = useTheme();
+  console.log("Theme>====>>", theme);
+  const isMatch = useMediaQuery(theme.breakpoints.down('md'));
+  console.log("ismatchMd====>", isMatch);
+
 
   return (
     <React.Fragment>
-      <AppBar sx={{background: '#03DAC6'}}>
+      <AppBar sx={{ background: '#03DAC6' }}>
         <Toolbar>
 
 
-        {/* <Typography > SHOPPING </Typography> */}
-        <ShoppingCartCheckoutIcon/>
-        <Tabs textColor='inherit' 
-        value={value} 
-        onChange={(e, value) => setvalue(value)}
-        indicatorColor='secondary'>
- <Tab label="Blogs"/>
- <Tab label="Contact"/>
- <Tab label="Home"/>
- <Tab label="About"/>
- <Tab label="Service"/>
-        </Tabs>
-        <Button sx={{marginLeft: "auto"}} variant="contained">
-          Login{" "}
+
+          <ShoppingCartCheckoutIcon />
+          
+{
+            isMatch ? (
+              <>
+                <Typography > SHOPPING </Typography>
+                <DramerCom/>
+              </>
+            ) :(
+
+              <>
+               <Tabs textColor='inherit'
+            value={value}
+            onChange={(e, value) => setvalue(value)}
+            indicatorColor='secondary'>
+            <Tab label="Blogs" />
+            <Tab label="Contact" />
+            <Tab label="Home" />
+            <Tab label="About" />
+            <Tab label="Service" />
+          </Tabs>
+          <Button sx={{ marginLeft: "auto" }} variant="contained">
+            Login{" "}
           </Button>
-        <Button sx={{marginLeft: "10px"}} variant="contained">
-          SignUp{" "}
+          <Button sx={{ marginLeft: "10px" }} variant="contained">
+            SignUp{" "}
           </Button>
+              </>
+            )
+           
+          }
+
+         
         </Toolbar>
-        <DramerCom/>
+
       </AppBar>
     </React.Fragment>
 
