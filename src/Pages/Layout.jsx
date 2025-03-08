@@ -57,7 +57,7 @@ const Layout = () => {
 
         {/* <Typography > SHOPPING </Typography> */}
         <ShoppingCartCheckoutIcon/>
-        <Tabs textColor='inherit'>
+        <Tabs textColor='inherit' value={0} indicatorColor='secondary'>
  <Tab label="Blogs"/>
  <Tab label="Contact"/>
  <Tab label="Home"/>
