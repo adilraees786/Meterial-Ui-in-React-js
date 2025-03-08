@@ -47,6 +47,7 @@
 import React, { useState } from 'react'
 import { AppBar, Tabs, Tab, Toolbar, Typography, Button } from '@mui/material'
 import ShoppingCartCheckoutIcon from '@mui/icons-material/ShoppingCartCheckout';
+import DramerCom from '../Components/DramerCom';
 
 const Layout = () => {
 const [value, setvalue ] = useState();
@@ -76,6 +77,7 @@ const [value, setvalue ] = useState();
           SignUp{" "}
           </Button>
         </Toolbar>
+        <DramerCom/>
       </AppBar>
     </React.Fragment>
 

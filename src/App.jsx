@@ -4,6 +4,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 // import NoPage from "./Pages/NoPage";
 // import Home from "./Pages/Home";
 import Layout from './Pages/Layout';
+import DramerCom from "./Components/DramerCom";
 // import Blogs from './Pages/Blogs';
 // import Contact from "./Pages/Contact";
 // import Signup from "./Components/Signup";
@@ -24,6 +25,7 @@ export default function App() {
           <Route path="*" element={<NoPage />} />
           <Route path="signup" element={<Signup />} />
           <Route path="login" element={<Login />} /> */}
+          <Route path="dramercom" element={<DramerCom />} />
         </Route>
       </Routes>
     </BrowserRouter>
