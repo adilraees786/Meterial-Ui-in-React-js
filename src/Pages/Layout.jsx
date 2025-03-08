@@ -44,11 +44,13 @@
 
 // export default Layout;
 
-import React from 'react'
+import React, { useState } from 'react'
 import { AppBar, Tabs, Tab, Toolbar, Typography, Button } from '@mui/material'
 import ShoppingCartCheckoutIcon from '@mui/icons-material/ShoppingCartCheckout';
 
 const Layout = () => {
+const [value, setvalue ] = useState();
+
   return (
     <React.Fragment>
       <AppBar sx={{background: '#03DAC6'}}>
@@ -57,7 +59,10 @@ const Layout = () => {
 
         {/* <Typography > SHOPPING </Typography> */}
         <ShoppingCartCheckoutIcon/>
-        <Tabs textColor='inherit' value={0} indicatorColor='secondary'>
+        <Tabs textColor='inherit' 
+        value={value} 
+        onChange={(e, value) => setvalue(value)}
+        indicatorColor='secondary'>
  <Tab label="Blogs"/>
  <Tab label="Contact"/>
  <Tab label="Home"/>
