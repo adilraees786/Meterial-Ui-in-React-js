@@ -74,7 +74,7 @@ const Layout = () => {
 {
             isMatch ? (
               <>
-                <Typography > SHOPPING </Typography>
+                <Typography  sx={{fontSize: "1.5rem", marginRight:"10%"}}> SHOPPING </Typography>
                 <DramerCom/>
               </>
             ) :(

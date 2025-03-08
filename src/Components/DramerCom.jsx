@@ -3,6 +3,8 @@ import { Drawer, IconButton, List, ListItemButton,
      ListItemIcon, ListItemText } from '@mui/material'
      import MenuIcon from '@mui/icons-material/Menu';
 
+     const PAGES =["Blogs", "Contact", "Home", "About", "Services", "Login", "Logout"]
+
 const DramerCom = () => {
     const [openDrawer, setOpenDrawer] = useState(false);
   return (
@@ -10,11 +12,21 @@ const DramerCom = () => {
     <Drawer open={openDrawer}
      onClose={() => setOpenDrawer(false)}>
 <List>
-    <ListItemButton>
+{
+    PAGES.map((page, index) => (  
+        <ListItemButton
+        onClick={() => setOpenDrawer(false)}
+         key={index}>
         <ListItemIcon>
-            <ListItemText>Login</ListItemText>
+            <ListItemText>{page}</ListItemText>
         </ListItemIcon>
     </ListItemButton>
+
+
+       ))                                                                           
+}
+
+   
 </List>
     </Drawer>
     <IconButton 
