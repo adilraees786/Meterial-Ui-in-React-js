@@ -64,7 +64,7 @@ const Layout = () => {
 
   return (
     <React.Fragment>
-      <AppBar sx={{ background: '#03DAC6' }}>
+      <AppBar sx={{ background: "blue" }}>
         <Toolbar>
 
 
@@ -80,7 +80,9 @@ const Layout = () => {
             ) :(
 
               <>
-               <Tabs textColor='inherit'
+               <Tabs
+               sx={{marginLeft: "auto"}}
+                textColor="inherit"
             value={value}
             onChange={(e, value) => setvalue(value)}
             indicatorColor='secondary'>
