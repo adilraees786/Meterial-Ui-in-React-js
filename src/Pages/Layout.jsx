@@ -45,10 +45,7 @@
 // export default Layout;
 
 import React, { useState } from 'react'
-import {
-  AppBar, Tabs, Tab, Toolbar, Typography,
-  Button, useMediaQuery, useTheme
-} from '@mui/material'
+import {AppBar, Tabs, Tab, Toolbar, Typography,Button, useMediaQuery, useTheme} from '@mui/material'
 import ShoppingCartCheckoutIcon from '@mui/icons-material/ShoppingCartCheckout';
 import DramerCom from '../Components/DramerCom';
 
