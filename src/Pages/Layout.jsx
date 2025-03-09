@@ -66,15 +66,13 @@ const Layout = () => {
     <React.Fragment>
       <AppBar sx={{ background: "blue" }}>
         <Toolbar>
-
-
-
           <ShoppingCartCheckoutIcon />
-          
 {
             isMatch ? (
               <>
-                <Typography  sx={{fontSize: "1.5rem", marginRight:"10%"}}> SHOPPING </Typography>
+                <Typography  sx={{fontSize: "1.5rem", marginRight:"10%"}}> 
+                  SHOPPING 
+                </Typography>
                 <DramerCom/>
               </>
             ) :(
@@ -105,13 +103,9 @@ const Layout = () => {
             )
            
           }
-
-         
         </Toolbar>
-
       </AppBar>
     </React.Fragment>
-
 
   )
 }
