@@ -54,9 +54,9 @@ const PAGES =["Blogs", "Contact", "Home", "About", "Services"]
 const Layout = () => {
   const [value, setvalue] = useState();
   const theme = useTheme();
-  console.log("Theme>====>>", theme);
+  // console.log("Theme>====>>", theme);
   const isMatch = useMediaQuery(theme.breakpoints.down('md'));
-  console.log("ismatchMd====>", isMatch);
+  // console.log("ismatchMd====>", isMatch);
 
   return (
     <React.Fragment>
