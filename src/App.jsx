@@ -24,11 +24,12 @@ export default function App() {
         {/* <Route path="home" element={<Home />} /> */}
 
         
-          {/* <Route path="blogs" element={<Blogs />} />
-          <Route path="contact" element={<Contact />} />
+           {/* <Route path="blogs" element={<Blogs />} /> */}
+
+          {/* <Route path="contact" element={<Contact />} />
           <Route path="*" element={<NoPage />} />
           <Route path="signup" element={<Signup />} />
-          <Route path="login" element={<Login />} /> */}
+          <Route path="login" element={<Login />} />  */}
        
         </Route>
       </Routes>
