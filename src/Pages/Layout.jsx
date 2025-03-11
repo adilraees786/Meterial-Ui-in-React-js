@@ -50,6 +50,7 @@ import { AppBar, Tabs, Tab, Toolbar, Typography, Button, useMediaQuery,
 import ShoppingCartCheckoutIcon from '@mui/icons-material/ShoppingCartCheckout';
 import DramerCom from '../Components/DramerCom';
 
+
 const PAGES = ["Blogs", "Contact", "Home", "About", "Services"]
 
 const Layout = () => {
@@ -58,6 +59,7 @@ const Layout = () => {
   // console.log("Theme>====>>", theme);
   const isMatch = useMediaQuery(theme.breakpoints.down('md'));
   // console.log("ismatchMd====>", isMatch);
+
 
   return (
     <React.Fragment>
@@ -79,6 +81,9 @@ const Layout = () => {
                   textColor="inherit"
                   value={value}
                   onChange={(e, value) => setvalue(value)}
+                 
+                
+
                   indicatorColor='secondary'>
                   {
                     PAGES.map((page, index) => (
@@ -104,6 +109,11 @@ const Layout = () => {
 }
 
 export default Layout;
+
+
+
+
+
 
 
 

@@ -21,8 +21,10 @@ export default function App() {
       <Routes>
         <Route path="/" element={<Layout />}>
         <Route path="dramer" element={<DramerCom />} />
-          {/* <Route index element={<Home />} />
-          <Route path="blogs" element={<Blogs />} />
+        {/* <Route path="home" element={<Home />} /> */}
+
+        
+          {/* <Route path="blogs" element={<Blogs />} />
           <Route path="contact" element={<Contact />} />
           <Route path="*" element={<NoPage />} />
           <Route path="signup" element={<Signup />} />

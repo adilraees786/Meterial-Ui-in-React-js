@@ -38,7 +38,10 @@ import React from 'react'
 
 const Home = () => {
   return (
-    <div>Home</div>
+    <div style={{ padding: "20px" }}>
+    <h1>Welcome to the Home Page</h1>
+    <p>This is the new Home page you navigated to.</p>
+  </div>
   )
 }
 
