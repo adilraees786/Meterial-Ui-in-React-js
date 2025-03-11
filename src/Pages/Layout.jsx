@@ -45,11 +45,12 @@
 // export default Layout;
 
 import React, { useState } from 'react'
-import {AppBar, Tabs, Tab, Toolbar, Typography,Button, useMediaQuery, useTheme} from '@mui/material'
+import { AppBar, Tabs, Tab, Toolbar, Typography, Button, useMediaQuery, 
+  useTheme } from '@mui/material'
 import ShoppingCartCheckoutIcon from '@mui/icons-material/ShoppingCartCheckout';
 import DramerCom from '../Components/DramerCom';
 
-const PAGES =["Blogs", "Contact", "Home", "About", "Services"]
+const PAGES = ["Blogs", "Contact", "Home", "About", "Services"]
 
 const Layout = () => {
   const [value, setvalue] = useState();
@@ -63,41 +64,37 @@ const Layout = () => {
       <AppBar sx={{ background: "blue" }}>
         <Toolbar>
           <ShoppingCartCheckoutIcon />
-{
+          {
             isMatch ? (
               <>
-                <Typography  sx={{fontSize: "1.5rem", marginRight:"10%"}}> 
-                  SHOPPING 
+                <Typography sx={{ fontSize: "1.5rem", marginRight: "10%" }}>
+                  SHOPPING
                 </Typography>
-                <DramerCom/>
+                <DramerCom />
               </>
-            ) :(
-
+            ) : (
               <>
-               <Tabs
-               sx={{marginLeft: "auto"}}
-                textColor="inherit"
-            value={value}
-            onChange={(e, value) => setvalue(value)}
-            indicatorColor='secondary'>
-              {
-                PAGES.map((page, index) =>(
-                  <Tab key={index} label={page} />
+                <Tabs
+                  sx={{ marginLeft: "auto" }}
+                  textColor="inherit"
+                  value={value}
+                  onChange={(e, value) => setvalue(value)}
+                  indicatorColor='secondary'>
+                  {
+                    PAGES.map((page, index) => (
+                      <Tab key={index} label={page} />
+                    ))
+                  }
 
-                ))
-
-              }
-            
-          </Tabs>
-          <Button sx={{ marginLeft: "auto" }} variant="contained">
-            Login{" "}
-          </Button>
-          <Button sx={{ marginLeft: "10px" }} variant="contained">
-            SignUp{" "}
-          </Button>
+                </Tabs>
+                <Button sx={{ marginLeft: "auto" }} variant="contained">
+                  Login{" "}
+                </Button>
+                <Button sx={{ marginLeft: "10px" }} variant="contained">
+                  SignUp{" "}
+                </Button>
               </>
             )
-           
           }
         </Toolbar>
       </AppBar>
